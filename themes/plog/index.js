@@ -206,7 +206,7 @@ const LayoutSlug = props => {
             <div id='article-wrapper'>
               <NotionPage post={post} />
             </div>
-            //<ShareBar post={post} />
+            {/*<ShareBar post={post} />*/}
             <Comment frontMatter={post} />
             <ArticleFooter />
           </>
