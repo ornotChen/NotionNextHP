@@ -17,6 +17,7 @@ module.exports = {
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
     // '"LXGW WenKai"',
+    '"Noto Sans SC"',
     '"PingFang SC"',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -25,7 +26,6 @@ module.exports = {
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
-    '"Noto Sans SC"',
     'HarmonyOS_Regular',
     '"Helvetica Neue"',
     'Helvetica',
