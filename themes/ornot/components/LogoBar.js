@@ -31,7 +31,7 @@ export default function LogoBar(props) {
       : (
             <p className="ml-2 font-medium text-gray-800 dark:text-gray-300 header-name">
                 <Link href="/" aria-label={siteConfig('TITLE')}> {siteConfig('TITLE')}</Link>
-                {' '}<span className="font-normal text-xs text-gray-00 dark:text-gray-400">{siteConfig('DESCRIPTION')}</span>
+                {' '}<span className="font-normal text-xs text-gray-500 dark:text-gray-400">{siteConfig('DESCRIPTION')}</span>
             </p>
         )}
 </div>
