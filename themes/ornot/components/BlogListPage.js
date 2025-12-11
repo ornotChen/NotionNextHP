@@ -50,7 +50,7 @@ export const BlogListPage = props => {
     <div className='w-full'>
       <div
         id='posts-wrapper'
-        className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-6 md:px-12 lg:px-24 py-12'>
+        className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-0 md:px-4 lg:px-0 lg:mx-[5%] py-12'>
         {posts?.map((post, index) => (
           <BlogPost
             index={index}
