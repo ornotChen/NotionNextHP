@@ -34,7 +34,14 @@ const BlogPost = (props) => {
             data-aos-duration="500"
             data-aos-once="true"
             data-aos-anchor-placement="top-bottom"
-            key={post?.id} className='cursor-pointer relative'>
+            className="
+              cursor-pointer 
+              bg-white dark:bg-neutral-900 
+              rounded-2xl overflow-hidden 
+              shadow-sm hover:shadow-lg 
+              transition-all duration-300 
+              border border-gray-100 dark:border-neutral-800
+            ">
 
             <LazyImage src={pageThumbnail} className='aspect-[16/9] w-full h-full object-cover filter contrast-120' />
 
