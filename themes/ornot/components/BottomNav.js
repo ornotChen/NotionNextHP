@@ -17,7 +17,7 @@ const BottomNav = props => {
       <div
         id='bottom-nav'
         className={
-          'bg-[#f5f5f4]/80 dark:bg-[#111111]/90 backdrop-blur-md px-4 hidden md:fixed top-0 w-screen py-4 text-sm tracking-wide md:flex flex-row justify-between items-center'
+          'bg-[#f5f5f4]/80 dark:bg-[#111111]/90 backdrop-blur-md px-4 hidden md:fixed top-0 w-screen py-4 text-xs tracking-wide md:flex flex-row justify-between items-center'
         }>
         {/* 左侧logo文字栏 */}
         <LogoBar {...props} />
