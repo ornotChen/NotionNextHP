@@ -17,7 +17,7 @@ const BottomNav = props => {
       <div
         id='bottom-nav'
         className={
-          'dark:bg-black dark:bg-opacity-50z-20 px-4 hidden glassmorphism md:fixed bottom-0 w-screen py-4 md:flex flex-row justify-between items-center'
+          'bg-[#f5f5f4]/80 dark:bg-[#111111]/90 backdrop-blur-md px-4 hidden glassmorphism md:fixed top-0 w-screen py-4 text-sm tracking-wide md:flex flex-row justify-between items-center'
         }>
         {/* 左侧logo文字栏 */}
         <LogoBar {...props} />
@@ -91,9 +91,6 @@ const MenuList = props => {
         {links?.map((link, index) => (
           <MenuItemDrop key={index} link={link} />
         ))}
-        <li className='my-auto px-2'>
-          <FullScreenButton />
-        </li>
         <li className='my-auto px-2'>
           <InformationButton />
         </li>
