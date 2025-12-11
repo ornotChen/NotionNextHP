@@ -18,7 +18,7 @@ const Header = props => {
     <div className='md:hidden fixed top-0 w-full z-20'>
       <div
         id='sticky-nav'
-        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8  glassmorphism ${
+        className={`bg-[#f5f5f4]/80 dark:bg-[#111111]/90 backdrop-blur-md sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 px-4 py-4 text-xs ${
           !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
         }`}>
         <Link
@@ -125,7 +125,7 @@ const NavBar = props => {
           isOpen={isOpen}
           type='vertical'
           className='fixed top-16 right-6'>
-          <div className='dark:border-black bg-white dark:bg-black rounded border p-2 text-sm'>
+          <div className='rounded p-2 text-xs bg-[#f5f5f4]/95 dark:bg-[#111111]/95 backdrop-blur-md border border-gray-300/30 dark:border-gray-700/30'>
             {links?.map((link, index) => (
               <MenuItemCollapse
                 key={index}
