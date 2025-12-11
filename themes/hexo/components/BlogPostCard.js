@@ -12,7 +12,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
     !post.pageCoverThumbnail &&
     siteConfig('HEXO_POST_LIST_COVER_DEFAULT', null, CONFIG)
   ) {
-    post.pageCoverThumbnail = https://cdn.ornot.work/background_01.jpg
+    post.pageCoverThumbnail = 'https://cdn.ornot.work/background_01.jpg'
   }
   const showPageCover =
     siteConfig('HEXO_POST_LIST_COVER', null, CONFIG) &&
