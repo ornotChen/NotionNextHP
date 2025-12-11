@@ -43,7 +43,7 @@ const BlogPost = (props) => {
               border border-gray-100 dark:border-neutral-800
             ">
 
-            <LazyImage src={pageThumbnail} className='aspect-[16/9] w-full h-full object-cover filter brightness-105 contrast-50 saturate-50' />
+            <LazyImage src={pageThumbnail} className='aspect-[16/9] w-full h-full object-cover filter brightness-105 contrast-[.75] saturate-[.90]' />
 
             <h2 className="text-md absolute left-0 bottom-0 m-4 text-gray-100 shadow-text">
                 {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post.pageIcon} />} {post?.title}
