@@ -15,7 +15,7 @@ const Header = props => {
   const title = siteConfig('TITLE')
 
   return (
-    <div className='md:hidden fixed top-0 w-full z-20'>
+    <div className='md:hidden fixed top-4 w-full z-20'>
       <div
         id='sticky-nav'
         className={`bg-[#f5f5f4]/80 dark:bg-[#111111]/90 backdrop-blur-md sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 px-4 py-4 text-xs ${
