@@ -1,8 +1,8 @@
-import SmartLink from '@/components/SmartLink'
+import Link from 'next/link'
 
 const TagItemMini = ({ tag, selected = false }) => {
   return (
-    <SmartLink
+    <Link
       key={tag}
       href={selected ? '/' : `/tag/${encodeURIComponent(tag.name)}`}
       passHref
@@ -14,7 +14,7 @@ const TagItemMini = ({ tag, selected = false }) => {
 
       <div className='font-light'>{selected && <i className='mr-1 fa-tag'/>} {tag.name + (tag.count ? `(${tag.count})` : '')} </div>
 
-    </SmartLink>
+    </Link>
   );
 }
 

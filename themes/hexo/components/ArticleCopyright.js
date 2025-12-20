@@ -1,12 +1,11 @@
 import { useGlobal } from '@/lib/global'
-import SmartLink from '@/components/SmartLink'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import CONFIG from '../config'
 import { siteConfig } from '@/lib/config'
-import NotByAI from '@/components/NotByAI'
 
-export default function ArticleCopyright() {
+export default function ArticleCopyright () {
   const router = useRouter()
   const [path, setPath] = useState(siteConfig('LINK') + router.asPath)
   useEffect(() => {
@@ -20,19 +19,17 @@ export default function ArticleCopyright() {
   }
 
   return (
-    <section className='dark:text-gray-300 mt-6 mx-1 '>
-      <ul className='overflow-x-auto whitespace-nowrap text-sm dark:bg-gray-900 bg-gray-100 p-5 leading-8 border-l-2 border-indigo-500'>
+    <section className="dark:text-gray-300 mt-6 mx-1 ">
+      <ul className="overflow-x-auto whitespace-nowrap text-sm dark:bg-gray-900 bg-gray-100 p-5 leading-8 border-l-2 border-indigo-500">
         <li>
           <strong className='mr-2'>{locale.COMMON.AUTHOR}:</strong>
-          <SmartLink href={'/about'} className='hover:underline'>
+          <Link href={'/about'} className="hover:underline">
             {siteConfig('AUTHOR')}
-          </SmartLink>
+          </Link>
         </li>
         <li>
-          <strong className='mr-2'>{locale.COMMON.URL}:</strong>
-          <a
-            className='whitespace-normal break-words hover:underline'
-            href={path}>
+        <strong className='mr-2'>{locale.COMMON.URL}:</strong>
+          <a className="whitespace-normal break-words hover:underline" href={path}>
             {path}
           </a>
         </li>
@@ -40,12 +37,7 @@ export default function ArticleCopyright() {
           <strong className='mr-2'>{locale.COMMON.COPYRIGHT}:</strong>
           {locale.COMMON.COPYRIGHT_NOTICE}
         </li>
-        {siteConfig('HEXO_ARTICLE_NOT_BY_AI', false, CONFIG) && (
-          <li>
-            <NotByAI />
-          </li>
-        )}
       </ul>
     </section>
-  )
+  );
 }

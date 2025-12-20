@@ -1,4 +1,4 @@
-import SmartLink from '@/components/SmartLink'
+import Link from 'next/link'
 import CONFIG from '../config'
 import { siteConfig } from '@/lib/config'
 
@@ -13,22 +13,22 @@ export default function ArticleAdjacent ({ prev, next }) {
   }
   return (
     <section className='pt-8 text-gray-800 items-center text-xs md:text-sm flex justify-between m-1 '>
-      <SmartLink
+      <Link
         href={`/${prev.slug}`}
         passHref
         className='py-1  cursor-pointer hover:underline justify-start items-center dark:text-white flex w-full h-full duration-200'>
 
         <i className='mr-1 fas fa-angle-left' />{prev.title}
 
-      </SmartLink>
-      <SmartLink
+      </Link>
+      <Link
         href={`/${next.slug}`}
         passHref
         className='py-1 cursor-pointer hover:underline justify-end items-center dark:text-white flex w-full h-full duration-200'>
         {next.title}
         <i className='ml-1 my-1 fas fa-angle-right' />
 
-      </SmartLink>
+      </Link>
     </section>
   )
 }
