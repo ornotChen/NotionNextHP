@@ -1,4 +1,4 @@
-import { compressImage } from '@/lib/notion/mapImage'
+import { compressImage } from '@/lib/db/notion/mapImage'
 import Link from 'next/link'
 import { isMobile } from '@/lib/utils'
 import LazyImage from '@/components/LazyImage'
