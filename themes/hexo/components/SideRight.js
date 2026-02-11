@@ -85,6 +85,9 @@ export default function SideRight(props) {
             <TagGroups tags={tags} currentTag={currentTag} />
           </Card>
         )}
+
+        <Announcement post={notice} />
+          
         {siteConfig('HEXO_WIDGET_LATEST_POSTS', null, CONFIG) &&
           latestPosts &&
           latestPosts.length > 0 && (
@@ -93,7 +96,7 @@ export default function SideRight(props) {
             </Card>
           )}
 
-        <Announcement post={notice} />
+        
 
         {siteConfig('COMMENT_WALINE_SERVER_URL') &&
           siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments />}

@@ -1,6 +1,6 @@
 import LazyImage from '@/components/LazyImage'
 import { siteConfig } from '@/lib/config'
-import SmartLink from '@/components/SmartLink'
+import Link from 'next/link'
 import CONFIG from '../config'
 import { BlogPostCardInfo } from './BlogPostCardInfo'
 
@@ -12,7 +12,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
     !post.pageCoverThumbnail &&
     siteConfig('HEXO_POST_LIST_COVER_DEFAULT', null, CONFIG)
   ) {
-    post.pageCoverThumbnail = siteInfo?.pageCover
+    post.pageCoverThumbnail = 'https://cdn.ornot.work/background_01.jpg'
   }
   const showPageCover =
     siteConfig('HEXO_POST_LIST_COVER', null, CONFIG) &&
@@ -45,7 +45,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
         {/* 图片封面 */}
         {showPageCover && (
           <div className='md:w-5/12 overflow-hidden'>
-            <SmartLink href={post?.href}>
+            <Link href={post?.href}>
               <>
                 <LazyImage
                   priority={index === 1}
@@ -54,7 +54,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                   className='h-56 w-full object-cover object-center group-hover:scale-110 duration-500'
                 />
               </>
-            </SmartLink>
+            </Link>
           </div>
         )}
       </div>
